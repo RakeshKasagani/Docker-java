@@ -32,7 +32,7 @@ Everything is deployed on an **AWS EC2 instance**.
 | 8081 | Nexus                    |
 | 9000 | SonarQube                |
 | 8080 | Tomcat App Deployment    |
-
+| 8082 | loginregistration        |
 ---
 
 # 🐳 **2. Install Docker on EC2**
