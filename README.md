@@ -1,4 +1,4 @@
-# 🚀 **Complete CI/CD Pipeline – Jenkins, SonarQube, Nexus, Docker, DockerHub, Tomcat Deployment**
+#  Complete CI/CD Pipeline – Jenkins, SonarQube, Nexus, Docker, DockerHub, Tomcat Deployment
 
 This repository demonstrates a **full end-to-end DevOps CI/CD pipeline** for a Java Web Application (WAR) deployed on **Tomcat** using Docker.
 Pipeline includes:
@@ -21,7 +21,7 @@ Everything is deployed on an **AWS EC2 instance**.
 
 ### ✔ OS: Ubuntu 22.04
 
-### ✔ Minimum Storage: 16GB
+### ✔ Minimum Storage: 12GB
 
 ### ✔ Open Ports:
 
@@ -54,7 +54,7 @@ Logout & login again.
 SonarQube requires good RAM (2GB+).
 
 ```bash
-docker run -d --name sonar \
+docker run -dt --name sonar \
   -p 9000:9000 \
   sonarqube:lts
 ```
@@ -70,7 +70,7 @@ http://<EC2_PUBLIC_IP>:9000
 # 🧰 **4. Run Nexus Repository**
 
 ```bash
-docker run -d --name nexus \
+docker run -dt --name nexus \
   -p 8081:8081 \
   sonatype/nexus3
 ```
@@ -125,7 +125,7 @@ docker build -t jenkins-docker:latest .
 # 🧩 **6. Run Jenkins Container**
 
 ```bash
-docker run -d \
+docker run -dt \
   --name jenkins \
   -p 8080:8080 \
   -p 50000:50000 \
@@ -176,7 +176,7 @@ http://<EC2_PUBLIC_IP>:8080
 | -------------- | ----------- | ----------------------- |
 | sonar          | Secret Text | SonarQube token         |
 | nexus          | User/Pass   | Nexus admin credentials |
-| docker hub     | User/Pass   | DockerHub login         |
+| docker-hub     | User/Pass   | DockerHub login         |
 
 ---
 
