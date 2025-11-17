@@ -35,6 +35,20 @@ Everything is deployed on an **AWS EC2 instance**.
 | 8082 | loginregistration        |
 ---
 <img width="620" height="232" alt="1" src="https://github.com/user-attachments/assets/66c5ce5d-c21a-4344-9287-bb6914e647ef" />
+<img width="608" height="338" alt="2" src="https://github.com/user-attachments/assets/cf0a81b0-d0ed-42e6-a4af-2ccdeb72f3db" />
+<img width="643" height="211" alt="3" src="https://github.com/user-attachments/assets/132ceac6-49cb-42d2-a043-e95a78d7b022" />
+<img width="461" height="344" alt="4" src="https://github.com/user-attachments/assets/81bb30a1-cea6-4df6-8cd3-5c2caa49a3ed" />
+<img width="621" height="222" alt="5" src="https://github.com/user-attachments/assets/4f096fc9-3758-410c-9b53-b2bfc0e1d941" />
+<img width="604" height="339" alt="6" src="https://github.com/user-attachments/assets/b6976880-b9a6-408d-8c04-9fa45220378c" />
+<img width="618" height="278" alt="7" src="https://github.com/user-attachments/assets/c6d512b5-fa85-4697-bf04-29017e4f62b9" />
+<img width="618" height="278" alt="7" src="https://github.com/user-attachments/assets/bde81a58-815c-428c-9e18-7fe6a761c38f" />
+
+
+
+
+
+
+
 
 
 # 🐳 **2. Install Docker on EC2**
