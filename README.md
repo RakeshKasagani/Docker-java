@@ -43,14 +43,6 @@ Everything is deployed on an **AWS EC2 instance**.
 <img width="618" height="278" alt="7" src="https://github.com/user-attachments/assets/c6d512b5-fa85-4697-bf04-29017e4f62b9" />
 <img width="618" height="278" alt="7" src="https://github.com/user-attachments/assets/bde81a58-815c-428c-9e18-7fe6a761c38f" />
 
-
-
-
-
-
-
-
-
 # 🐳 **2. Install Docker on EC2**
 
 ```bash
@@ -60,10 +52,10 @@ sudo systemctl start docker
 sudo systemctl enable docker
 sudo usermod -aG docker ubuntu
 ```
-
-Logout & login again.
-
----
+<img width="476" height="62" alt="11" src="https://github.com/user-attachments/assets/97c10b31-0e81-45f1-b67f-977fe301503b" />
+<img width="680" height="141" alt="12" src="https://github.com/user-attachments/assets/7f88ced0-fefb-44f4-a0de-592ccfa0fb37" />
+<img width="542" height="110" alt="13" src="https://github.com/user-attachments/assets/b560da64-0188-47dc-9c53-a75ca087fb67" />
+<img width="899" height="250" alt="14" src="https://github.com/user-attachments/assets/a1a8a220-a4fd-4f44-8d31-e373607dbb8f" />
 
 # 🎛️ **3. Run SonarQube in Docker**
 
@@ -80,6 +72,10 @@ Access:
 ```
 http://<EC2_PUBLIC_IP>:9000
 ```
+<img width="567" height="227" alt="15" src="https://github.com/user-attachments/assets/d6507875-072f-4923-b056-02cd66ecc6e7" />
+<img width="959" height="432" alt="17" src="https://github.com/user-attachments/assets/2bb64a20-eef1-4c96-9007-03ec9172c427" />
+
+
 
 ---
 
@@ -102,6 +98,9 @@ Retrieve initial password:
 ```bash
 docker exec -it nexus cat /nexus-data/admin.password
 ```
+<img width="584" height="271" alt="16" src="https://github.com/user-attachments/assets/8628fbc0-c592-45c0-9884-39c540686d71" />
+<img width="946" height="457" alt="18" src="https://github.com/user-attachments/assets/32b9219a-51a0-4e7c-8d08-d9a53916ffb7" />
+<img width="953" height="406" alt="19" src="https://github.com/user-attachments/assets/9b2a9008-8437-4e77-b542-4ebc0462f6d0" />
 
 ---
 
@@ -135,6 +134,7 @@ USER jenkins
 ```bash
 docker build -t jenkins-docker:latest .
 ```
+<img width="611" height="179" alt="20" src="https://github.com/user-attachments/assets/3f67cded-b300-4ccd-8b12-d0ba0d4b08c7" />
 
 ---
 
@@ -161,6 +161,11 @@ Access:
 ```
 http://<EC2_PUBLIC_IP>:8080
 ```
+<img width="952" height="269" alt="22" src="https://github.com/user-attachments/assets/ed645812-6119-4b17-a062-cfdd1ba1f7d0" />
+<img width="902" height="457" alt="23" src="https://github.com/user-attachments/assets/c5f4c040-975c-4117-a78f-2c5944eb4023" />
+<img width="923" height="460" alt="24" src="https://github.com/user-attachments/assets/abcbf46b-0e86-4f8d-9bd9-209c967267f4" />
+
+
 
 ---
 
@@ -174,6 +179,10 @@ http://<EC2_PUBLIC_IP>:8080
 * Docker Pipeline
 * Nexus Artifact Uploader (optional)
 * Docker pipeline
+  
+  <img width="915" height="459" alt="32" src="https://github.com/user-attachments/assets/620f8443-e961-4f6c-9c38-22647b32254b" />
+
+  
 
 ### Configure Tools:
 
@@ -183,6 +192,8 @@ http://<EC2_PUBLIC_IP>:8080
 
 * Name: `Maven`
 * Install automatically
+  
+<img width="926" height="437" alt="25" src="https://github.com/user-attachments/assets/580cbac7-3af1-4595-85a1-36edbb64faa6" />
 
 ---
 
@@ -195,6 +206,12 @@ http://<EC2_PUBLIC_IP>:8080
 | docker-hub     | User/Pass   | DockerHub login         |
 
 ---
+<img width="931" height="429" alt="27" src="https://github.com/user-attachments/assets/205d7525-f010-4a8d-b755-55b647638a65" />
+<img width="932" height="472" alt="28" src="https://github.com/user-attachments/assets/f7332a19-5347-4a51-837b-9177aecf44d4" />
+<img width="926" height="457" alt="29" src="https://github.com/user-attachments/assets/52cf7b43-2c01-475b-aeb7-85e32f6c7f6f" />
+
+
+
 
 # 🗳️ **9. Update `pom.xml` for Nexus (distributionManagement)**
 
@@ -206,6 +223,7 @@ http://<EC2_PUBLIC_IP>:8080
     </repository>
 </distributionManagement>
 ```
+<img width="684" height="418" alt="30" src="https://github.com/user-attachments/assets/ec9a708a-72e8-4d31-85d6-481158ce17eb" />
 
 ---
 
@@ -310,6 +328,12 @@ pipeline {
     }
 }
 ```
+<img width="930" height="463" alt="31" src="https://github.com/user-attachments/assets/1b88147b-ec55-4639-a8a9-ca850e2b3073" />
+
+<img width="956" height="418" alt="33" src="https://github.com/user-attachments/assets/cfbb8646-996f-4841-b926-761ee59543c6" />
+<img width="944" height="416" alt="34" src="https://github.com/user-attachments/assets/50b58885-70d2-4423-9aaf-e55390b45618" />
+<img width="957" height="395" alt="35" src="https://github.com/user-attachments/assets/120c62cc-ad4b-40d9-8cc5-3a621bbdabf4" />
+
 
 ---
 
@@ -340,6 +364,9 @@ Open in browser:
 ```
 http://<EC2_PUBLIC_IP>:8082
 ```
+<img width="654" height="40" alt="40" src="https://github.com/user-attachments/assets/720e9077-d6af-45e5-9032-0a5f2d65a3bf" />
+
+<img width="828" height="458" alt="42" src="https://github.com/user-attachments/assets/27940f2a-a322-4e6c-a1c9-08bd15a8d75f" />
 
 ---
 
@@ -357,6 +384,14 @@ You now have a **complete CI/CD pipeline**:
 ✔ Deployment in Tomcat container
 
 This is **production-grade DevOps pipeline**.
+<img width="955" height="391" alt="36" src="https://github.com/user-attachments/assets/ece1c17b-13ac-4a24-92f1-092a5e4fd6c6" />
+<img width="955" height="391" alt="36" src="https://github.com/user-attachments/assets/46ad134b-58b0-48e9-abb7-de05dd115ddd" />
+<img width="941" height="340" alt="38" src="https://github.com/user-attachments/assets/6cc38a0f-cebf-41cc-b29b-fd355d8dfac0" />
+<img width="937" height="445" alt="39" src="https://github.com/user-attachments/assets/ba387537-6f43-48dc-b75f-4d3c336e9df6" />
+<img width="940" height="165" alt="41" src="https://github.com/user-attachments/assets/cd5968f5-d6a2-4653-926f-05fc9937497f" />
 
----
+
+
+
+
 
