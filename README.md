@@ -34,6 +34,8 @@ Everything is deployed on an **AWS EC2 instance**.
 | 8080 | Tomcat App Deployment    |
 | 8082 | loginregistration        |
 ---
+<img width="620" height="232" alt="1" src="https://github.com/user-attachments/assets/66c5ce5d-c21a-4344-9287-bb6914e647ef" />
+
 
 # 🐳 **2. Install Docker on EC2**
 
